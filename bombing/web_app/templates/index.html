@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<header>
+  <div class="collapse bg-dark" id="navbarHeader">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 col-md-7 py-4">
+          <h2 class="text-white">Бомбардировки Ленинграда </h2>
+          <p class="text-muted">Рады видеть Вас на нашем портале! </p>
+        </div>
+        <div class="col-sm-4 offset-md-1 py-4">
+          <h4 class="text-white">Вам может быть интересно:</h4>
+          <ul class="list-unstyled">
+            <li><a href="http://127.0.0.1:8000/information/" class="text-white">Аналитика</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="navbar navbar-dark bg-dark shadow-sm">
+    <div class="container">
+      <a href="#" class="navbar-brand d-flex align-items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="me-2" viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+        <strong>Фотографии</strong>
+      </a>
+
+    </div>
+  </div>
+</header>
+
+<head>
+    <title>Basic Embed</title>
+
+    <script type="text/javascript"
+	    src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
+    <script type="text/javascript">
+        function initViz() {
+            var containerDiv = document.getElementById("vizContainer"),
+                url = "https://public.tableau.com/views/Lenigrad-2/Sheet3?:language=en&:display_count=y&:origin=viz_share_link",
+                options = {
+                    hideTabs: true,
+                    onFirstInteractive: function () {
+                        console.log("Run this code when the viz has finished loading.");
+                    }
+                };
+
+            var viz = new tableau.Viz(containerDiv, url, options);
+            // Create a viz object and embed it in the container div.
+        }
+    </script>
+</head>
+
+<body onload="initViz();">
+    <div id="vizContainer" style="width:full; height:700px;"></div>
+</body>
+
+</html>
